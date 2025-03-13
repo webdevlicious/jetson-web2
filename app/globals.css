@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --background: 12 13 18; /* Vulcan - Primary */
+    --foreground: 184 188 211; /* Violet Haze - Text */
+
+    --card: 12 13 18; /* Vulcan - Primary */
+    --card-foreground: 184 188 211; /* Violet Haze - Text */
+
+    --popover: 12 13 18; /* Vulcan - Primary */
+    --popover-foreground: 184 188 211; /* Violet Haze - Text */
+
+    --primary: 0 255 121; /* Spring Green - Highlights */
+    --primary-foreground: 12 13 18; /* Vulcan - Primary */
+
+    --secondary: 184 188 211; /* Violet Haze - Secondary */
+    --secondary-foreground: 12 13 18; /* Vulcan - Primary */
+
+    --muted: 22 23 28; /* Vulcan - Primary (slightly lighter) */
+    --muted-foreground: 144 148 171; /* Violet Haze - Secondary (slightly darker) */
+
+    --accent: 86 247 153; /* Shamrock - Accent */
+    --accent-foreground: 12 13 18; /* Vulcan - Primary */
+
+    --destructive: 255 19 240; /* Electric Fuchsia - Alerts */
+    --destructive-foreground: 12 13 18; /* Vulcan - Primary */
+
+    --border: 22 23 28; /* Vulcan - Primary (slightly lighter) */
+    --input: 22 23 28; /* Vulcan - Primary (slightly lighter) */
+    --ring: 0 255 121; /* Spring Green - Highlights */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 12 13 18; /* Vulcan - Primary */
+    --foreground: 184 188 211; /* Violet Haze - Text */
+
+    --card: 22 23 28; /* Vulcan - Primary (slightly lighter) */
+    --card-foreground: 184 188 211; /* Violet Haze - Text */
+
+    --popover: 12 13 18; /* Vulcan - Primary */
+    --popover-foreground: 184 188 211; /* Violet Haze - Text */
+
+    --primary: 0 255 121; /* Spring Green - Highlights */
+    --primary-foreground: 12 13 18; /* Vulcan - Primary */
+
+    --secondary: 32 33 38; /* Vulcan - Primary (slightly lighter) */
+    --secondary-foreground: 184 188 211; /* Violet Haze - Text */
+
+    --muted: 32 33 38; /* Vulcan - Primary (slightly lighter) */
+    --muted-foreground: 144 148 171; /* Violet Haze - Secondary (slightly darker) */
+
+    --accent: 86 247 153; /* Shamrock - Accent (30% opacity in the original) */
+    --accent-foreground: 184 188 211; /* Violet Haze - Text */
+
+    --destructive: 255 19 240; /* Electric Fuchsia - Alerts */
+    --destructive-foreground: 12 13 18; /* Vulcan - Primary */
+
+    --border: 32 33 38; /* Vulcan - Primary (slightly lighter) */
+    --input: 32 33 38; /* Vulcan - Primary (slightly lighter) */
+    --ring: 0 255 121; /* Spring Green - Highlights */
+  }
+}
+
+.shadow-light {
+  box-shadow: inset 0 0 5px rgba(184, 188, 211, 0.1); /* Violet Haze - 10% opacity */
+}
+
+.shadow-dark {
+  box-shadow: inset 0 0 5px rgba(0, 255, 121, 0.15); /* Spring Green - 15% opacity */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
